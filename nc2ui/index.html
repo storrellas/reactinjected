@@ -12,6 +12,11 @@
         background: transparent;
       }
     </style>
+
+    <!-- React injected script -->
+    <script defer="defer" src="/static/js/main.721ee4ca.js"></script>
+    <link href="/static/css/main.cd58f987.css" rel="stylesheet" />
+
   </head>
   <body style="margin:0">
     <div class="d-flex w-100 justify-content-center" style="padding: 2em 0; background:black; height: 100px">
@@ -25,25 +30,16 @@
       </div>
 
     </div>
+
     <div style="height: 400px; background-image: url(https://www.nespresso.com/static/us/solutions/homepage/assets/2022/february/desktop/DY_1440.jpg?impolicy=medium&imwidth=2880);background-size: cover">
       <div class="h-100 w-50 d-flex flex-column justify-content-center align-items-center"  style="color: white">
         <h1 class="text-center">EXCEPTIONAL<br>COFFEE AND<br>MORE</h1>
         <h2 class="text-center">Discover our <br>exclusive perks</h2>
-        <!-- <button class="p-3 btn-nespresso" style="background-color: white; color: black">Learn More</button> -->
-        <div id="root" class="w-100 text-center" style="max-height: 100px;"></div>
+        <button class="p-3 btn-nespresso" style="background-color: white; color: black">Learn More</button>
       </div>
     </div>
-    <div class="text-center" style="background-color: #929FB8; height: 200px;">
-      <div class="w-50 h-100 d-flex justify-content-center flex-column" style="margin: 0 auto">
-        <div>FREE ORIGIN MUGS & CHOCOLATES</div>
-        <div>WITH COFFEE PURCHASE</div>
-        <div>VERTUO: ORIGIN2022 | ORIGINAL: ORIGIN22</div>
-        <div class="text-center mt-3">
-          <button class="p-3 ms-3 btn-nespresso" style="background-color: white; color: black; max-width: 200px;">Learn More</button>
-        </div>
+    <div id="root" class="w-100 text-center" style="max-height: 100px;"></div>
 
-      </div>
-    </div>
 
 
 
@@ -58,35 +54,35 @@
     <!-- Load our React component. -->
     <script type="text/javascript">
 
-      class LearnMoreButton extends React.Component {
-        constructor(props) {
-          super(props);
-          this.state = { learnMore: false };
-        }
+      // class LearnMoreButton extends React.Component {
+      //   constructor(props) {
+      //     super(props);
+      //     this.state = { learnMore: false };
+      //   }
 
-        render() {
-          if (this.state.learnMore) {
-            return React.createElement('img', { 
-              role: 'button',
-              style: {height: '100%'}, 
-              src: 'https://www.creativefabrica.com/wp-content/uploads/2019/03/Coffee-cup-icon-by-LeisureProjects-580x387.jpg',
-              onClick: () => this.setState({ learnMore: false })
-            })
-          }
+      //   render() {
+      //     if (this.state.learnMore) {
+      //       return React.createElement('img', { 
+      //         role: 'button',
+      //         style: {height: '100%'}, 
+      //         src: 'https://www.creativefabrica.com/wp-content/uploads/2019/03/Coffee-cup-icon-by-LeisureProjects-580x387.jpg',
+      //         onClick: () => this.setState({ learnMore: false })
+      //       })
+      //     }
 
-          return React.createElement(
-            'button', 
-            { style: {color: "black", backgroundColor: "white", width: '100px'}, onClick: () => this.setState({ learnMore: true }) },
-            'Learn More'
-          );
-        }
-      }
+      //     return React.createElement(
+      //       'button', 
+      //       { style: {color: "black", backgroundColor: "white", width: '100px'}, onClick: () => this.setState({ learnMore: true }) },
+      //       'Learn More'
+      //     );
+      //   }
+      // }
 
-      // document.ready
-      document.addEventListener('DOMContentLoaded', () => {
-        const domContainer = document.querySelector('#root');
-        ReactDOM.render(React.createElement(LearnMoreButton), domContainer);
-      }, false);
+      // // document.ready
+      // document.addEventListener('DOMContentLoaded', () => {
+      //   const domContainer = document.querySelector('#root');
+      //   ReactDOM.render(React.createElement(LearnMoreButton), domContainer);
+      // }, false);
       
     </script>
 
